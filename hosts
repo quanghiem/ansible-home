@@ -1,0 +1,5 @@
+[bash]
+127.0.0.1
+
+[osx:children]
+bash

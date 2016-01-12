@@ -1,0 +1,22 @@
+---
+system: osx
+os: osx
+
+executables:
+  brew: /usr/local/bin/brew
+  vim: /usr/bin/vim
+  bash: /bin/bash
+
+directories:
+  etc: /usr/local/etc
+  var: /usr/local/var
+
+me:
+  user:
+    name: richardnghiem
+    group: staff
+    shell: "{{ executables.bash }}"
+
+  template_home: home/richardnghiem
+  home: /Users/richardnghiem
+  system: osx

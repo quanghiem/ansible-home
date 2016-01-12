@@ -1,0 +1,7 @@
+- src: https://github.com/quanghiem/ansible-bashrc
+  version: master
+  name: bashrc
+
+- src: https://github.com/quanghiem/ansible-git
+  version: master
+  name: git
