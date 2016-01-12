@@ -1,0 +1,43 @@
+---
+# tasks file for ansible-bashrc
+
+- name: bashrc | .bashrc
+  copy:
+    src: bashrc
+    dest: "{{ me.home }}/.bashrc"
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    mode: 0644
+
+- name: bashrc | .bash_profile
+  file:
+    src: "{{ me.home }}/.bashrc"
+    dest: "{{ me.home }}/.bash_profile"
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    state: link
+
+- name: bashrc | .bash_aliases
+  copy:
+    src: aliases
+    dest: "{{ me.home }}/.bash_aliases"
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    mode: 0644
+
+- name: bashrc | .bash_banner
+  copy:
+    src: banner
+    dest: "{{ me.home }}/.bash_banner"
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    mode: 0644
+
+- name: bashrc | .bash_powerline
+  copy:
+    src: powerline
+    dest: "{{ me.home }}/.bash_powerline"
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    mode: 0644
+

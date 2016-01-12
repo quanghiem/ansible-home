@@ -2,5 +2,5 @@
 - hosts: osx
   connection: local
   roles:
-    - bashrc
+    - bash
     - git

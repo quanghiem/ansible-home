@@ -1,0 +1,10 @@
+---
+# tasks file for anisble-git
+
+- name: git | .gitconfig
+  copy:
+    src: gitconfig
+    dest: "{{ me.home }}/.gitconfig"
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    mode: 0644
