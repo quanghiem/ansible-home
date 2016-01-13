@@ -13,3 +13,12 @@
   git:
     repo: https://github.com/amix/vimrc.git
     dest: "{{ me.home }}/.vim_runtime"
+
+- name: vim | my_configs.vim
+  copy:
+    src: my_configs.vim
+    dest: "{{ me.home }}/.vim_runtime/my_configs.vim"
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    mode: 0644
+  
