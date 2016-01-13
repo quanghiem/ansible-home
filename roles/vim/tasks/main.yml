@@ -1,2 +1,15 @@
 ---
 # tasks file for vim
+
+- name: vim | .vimrc
+  copy:
+    src: vimrc
+    dest: "{{ me.home }}/.vimrc"
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    mode: 0644
+
+- name: vim | git clone ultimate vimrc
+  git:
+    repo: https://github.com/amix/vimrc.git
+    dest: "{{ me.home }}/.vim_runtime"
