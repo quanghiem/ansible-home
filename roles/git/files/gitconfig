@@ -1,5 +1,5 @@
 [user]
-  email = richard.nghiem@invoice2go.com
+  email = richard@nghiem.org
   name = Richard Nghiem
 [merge]
   tool = vimdiff
