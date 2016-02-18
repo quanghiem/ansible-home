@@ -1,0 +1,7 @@
+---
+- hosts: linux
+  connection: local
+  roles:
+    - bash
+    - git
+    - vim

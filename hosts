@@ -3,3 +3,6 @@
 
 [osx:children]
 bash
+
+[linux:children]
+bash

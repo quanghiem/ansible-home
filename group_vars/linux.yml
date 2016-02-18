@@ -1,0 +1,21 @@
+---
+system: linux
+os: linux
+
+executables:
+  vim: /bin/vim
+  bash: /bin/bash
+
+directories:
+  etc: /usr/local/etc
+  var: /usr/local/var
+
+me:
+  user:
+    name: richard
+    group: richard
+    shell: "{{ executables.bash }}"
+
+  template_home: home/richard
+  home: /home/richard
+  system: linux
