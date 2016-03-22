@@ -2,10 +2,10 @@
 
 if [[ -f /usr/bin/toilet || -f /usr/local/bin/toilet ]]; then
   if [[ $USER = root ]]; then
-    toilet $(hostname | awk -F. '{print $1 " - " $2}') -F border -F gay -f smmono9
+    toilet $(hostname | awk -F. '{print $1}') -F border -F gay -f smmono9
   else
-    toilet $(hostname | awk -F. '{print $1 " - " $2}') -F gay -f smmono9
+    toilet $(hostname | awk -F. '{print $1}') -F gay -f smmono9
   fi
 elif [[ -f /usr/bin/figlet || -f /usr/local/bin/figlet ]]; then
-  figlet -t $(hostname | awk -F. '{print $1 " - " $2}')
+  figlet -t $(hostname | awk -F. '{print $1}')
 fi
