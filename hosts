@@ -1,8 +1,5 @@
-[bash]
+[osx]
+127.94.0.1
+
+[linux]
 127.0.0.1
-
-[osx:children]
-bash
-
-[linux:children]
-bash
