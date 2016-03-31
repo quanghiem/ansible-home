@@ -22,3 +22,38 @@
     group: "{{ me.user.group }}"
     mode: 0644
   
+- name: vim | mkdir ~/.vim/bundle
+  file:
+    path: ~/.vim/bundle
+    owner: "{{ me.user.name }}"
+    group: "{{ me.user.group }}"
+    mode: 0755
+    state: directory
+  
+- name: vim | git clone vim-yaml
+  git:
+    repo: https://github.com/stephpy/vim-yaml.git
+    dest: "{{ me.home }}/.vim/bundle/yaml"
+    force: yes
+
+- name: vim | git clone vim-puppet
+  git:
+    repo: https://github.com/rodjek/vim-puppet.git
+    dest: "{{ me.home }}/.vim/bundle/puppet"
+
+- name: vim | git clone xoria256
+  git:
+    repo: https://github.com/vim-scripts/xoria256.vim.git
+    dest: "{{ me.home }}/.vim/bundle/xoria256"
+
+
+- name: vim | git clone airline
+  git:
+    repo: https://github.com/vim-airline/vim-airline.git
+    dest: "{{ me.home }}/.vim/bundle/airline"
+
+- name: vim | git clone airline themes
+  git:
+    repo: https://github.com/vim-airline/vim-airline-themes.git
+    dest: "{{ me.home }}/.vim/bundle/airline-themes"
+
