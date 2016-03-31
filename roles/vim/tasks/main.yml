@@ -11,7 +11,7 @@
 
 - name: vim | git clone ultimate vimrc
   git:
-    repo: https://github.com/amix/vimrc.git
+    repo: https://github.com/quanghiem/vimrc.git
     dest: "{{ me.home }}/.vim_runtime"
 
 - name: vim | my_configs.vim
