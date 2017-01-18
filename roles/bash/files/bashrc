@@ -122,3 +122,5 @@ fi
 if [ -f ~/.bash_powerline ]; then
   . ~/.bash_powerline
 fi
+
+export PATH=$PATH:~/git/scripts/bin
