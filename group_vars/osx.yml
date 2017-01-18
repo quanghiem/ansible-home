@@ -13,10 +13,10 @@ directories:
 
 me:
   user:
-    name: richardnghiem
+    name: richard
     group: staff
     shell: "{{ executables.bash }}"
 
-  template_home: home/richardnghiem
-  home: /Users/richardnghiem
+  template_home: home/richard
+  home: /Users/richard
   system: osx
