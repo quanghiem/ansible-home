@@ -1,5 +1,6 @@
 alias ga='git add .'
 alias gapp='git add .; git commit -m "applying"'
+alias gbr='git fetch -p && git branch -r | grep richard | cut -d\/ -f2-'
 alias gc='git commit -m'
 alias gd='git diff'
 alias gm='git checkout master'
