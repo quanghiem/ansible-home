@@ -1,10 +1,32 @@
 ---
-# tasks file for anisble-git
-
-- name: git | .gitconfig
+- name: gitconfigs
   copy:
-    src: gitconfig
-    dest: "{{ me.home }}/.gitconfig"
-    owner: "{{ me.user.name }}"
-    group: "{{ me.user.group }}"
+    src: "{{ item }}"
+    dest: "{{ me.home }}/.{{ item }}"
     mode: 0644
+  loop:
+    - gitconfig
+    - gitconfig.reflow
+
+- name: git dir
+  file:
+    path: "{{ me.home }}/git"
+    state: directory
+    mode: 0755
+
+- name: git clone loop
+  git:
+    repo: "git@git.invoice2go.org:ops/{{ item }}.git"
+    dest: "{{ me.home }}/git/{{ item }}"
+    update: no
+  loop:
+    - terraform
+    - puppet
+    - deploy
+    - kong
+
+- name: git clone sandbox
+  git:
+    repo: "git@git.invoice2go.org:ops/terrasandbox.git"
+    dest: "{{ me.home }}/git/sandbox"
+    update: no

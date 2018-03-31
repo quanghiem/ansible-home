@@ -1,0 +1,9 @@
+[github]
+	site = https://git.invoice2go.org
+	endpoint = https://git.invoice2go.org/api/v3
+  oauth-token = 9b63ad6c86dd46211100f74bd6c4d029e23a7d5c
+[reflow]
+	git-server = GitHub
+[constants]
+	minimumApprovals = 0
+	approvalRegex = (?i-mx:lgtm|looks good to me|:\\+1:|:thumbsup:|:shipit:)
