@@ -43,3 +43,9 @@
     - tripmode
     - virtualbox
     - vlc
+
+- name: brew tap install..
+  homebrew_tap:
+    name: "{{ item }}"
+  loop:
+    - beeftornado/rmtree
