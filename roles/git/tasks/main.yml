@@ -16,17 +16,12 @@
 
 - name: git clone loop
   git:
-    repo: "git@git.invoice2go.org:ops/{{ item }}.git"
-    dest: "{{ me.home }}/git/{{ item }}"
+    repo: "git@git.invoice2go.org:ops/{{ item.repo }}.git"
+    dest: "{{ me.home }}/git/{{ item.dest }}"
     update: no
   loop:
-    - terraform
-    - puppet
-    - deploy
-    - kong
-
-- name: git clone sandbox
-  git:
-    repo: "git@git.invoice2go.org:ops/terrasandbox.git"
-    dest: "{{ me.home }}/git/sandbox"
-    update: no
+    - { repo: 'deploy',       dest: 'deploy' }
+    - { repo: 'kong',         dest: 'kong' }
+    - { repo: 'puppet',       dest: 'puppet' }
+    - { repo: 'terraform',    dest: 'terraform' }
+    - { repo: 'terrasandbox', dest: 'sandbox' }
