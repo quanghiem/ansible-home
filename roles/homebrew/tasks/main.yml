@@ -1,9 +1,45 @@
 ---
-# tasks file for homebrew
-
-- name: homebrew | install homebrew
+- name: install homebrew
   shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   args:
     creates: /usr/local/bin/brew
 
+- name: brew install..
+  homebrew:
+    name: "{{ item }}"
+  loop:
+    - awscli
+    - figlet
+    - httpie
+    - jq
+    - kops
+    - kubernetes-cli
+    - p7zip
+    - packer
+    - parallel
+    - pwgen
+    - terraform
+    - watch
+    - wget
+    - zsh
 
+- name: brew cask install..
+  homebrew_cask:
+    name: "{{ item }}"
+  loop:
+    - 1password
+    - authy
+    - dropbox
+    - filebot
+    - flixtools
+    - flux
+    - google-chrome
+    - plex-media-server
+    - radio-silence
+    - spotify
+    - transmission
+    - tripmode
+    - vlc
+    - virtualbox
+    - lifesize
+    - royal-tsx
