@@ -3,6 +3,5 @@
   connection: local
   roles:
     - homebrew
-    - bash
     - git
     - vim
