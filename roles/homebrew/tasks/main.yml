@@ -28,7 +28,6 @@
   homebrew_cask:
     name: "{{ item }}"
   loop:
-    - 1password
     - authy
     - dropbox
     - filebot
