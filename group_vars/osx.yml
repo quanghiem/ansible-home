@@ -3,9 +3,10 @@ system: osx
 os: osx
 
 executables:
+  bash: /bin/bash
   brew: /usr/local/bin/brew
   vim: /usr/bin/vim
-  bash: /bin/bash
+  zsh: /usr/local/bin/bash
 
 directories:
   etc: /usr/local/etc
@@ -15,7 +16,7 @@ me:
   user:
     name: richard
     group: staff
-    shell: "{{ executables.bash }}"
+    shell: "{{ executables.zsh }}"
 
   template_home: home/richard
   home: /Users/richard
