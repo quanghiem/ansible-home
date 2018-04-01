@@ -1,0 +1,18 @@
+---
+- name: python pip installed tools
+  pip:
+    name: "{{ item }}"
+  loop:
+    - awsume
+    - requests
+
+- name: ruby gem installed tools
+  gem:
+    name: "{{ item }}"
+  loop:
+    - git_reflow
+
+- name: awsume console plugin
+  command: awsume --install-plugin https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.py https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.yapsy-plugin
+  args:
+    creates: "{{ me.home }}/.aws/awsumePlugins/console.py"

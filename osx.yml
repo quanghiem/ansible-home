@@ -4,5 +4,6 @@
   roles:
     - homebrew
     - git
+    - tools
     - vim
     - zsh
