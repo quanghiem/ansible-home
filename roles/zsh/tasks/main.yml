@@ -1,0 +1,27 @@
+---
+- name: zsh prezto
+  git:
+    repo: "git@github.com:sorin-ionescu/prezto.git"
+    dest: "{{ me.home }}/.zprezto"
+    recursive: yes
+    update: no
+
+- name: zsh config symlinks
+  file:
+    src: "{{ me.home }}/.zprezto/runcoms/{{ item }}"
+    dest: "{{ me.home }}/.{{ item }}"
+    state: link
+  loop:
+    - zlogin
+    - zlogout
+    - zpreztorc
+    - zprofile
+    - zshenv
+
+- name: zsh custom configs
+  copy:
+    src: "{{ item }}"
+    dest: "{{ me.home }}/.{{ item }}"
+    mode: 0644
+  loop:
+    - zshrc
