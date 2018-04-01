@@ -1,4 +1,19 @@
 ---
+- name: tools dirs
+  file:
+    path: "{{ me.home }}/{{ item }}"
+    mode: 0755
+    state: directory
+  loop:
+    - .aws
+
+- name: tools configs
+  file:
+    dest: "{{ me.home }}/{{ item.d }}"
+    src: "{{ item.s }}"
+  loop:
+    - { s: 'aws.config', d: '.aws/config' }
+
 - name: python pip installed tools
   pip:
     name: "{{ item }}"
@@ -16,3 +31,4 @@
   command: awsume --install-plugin https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.py https://raw.githubusercontent.com/trek10inc/awsume/master/examplePlugin/console.yapsy-plugin
   args:
     creates: "{{ me.home }}/.aws/awsumePlugins/console.py"
+
