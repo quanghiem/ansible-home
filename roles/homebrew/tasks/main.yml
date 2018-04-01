@@ -19,6 +19,7 @@
     - parallel
     - pwgen
     - terraform
+    - tree
     - watch
     - wget
     - zsh
