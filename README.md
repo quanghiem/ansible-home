@@ -7,6 +7,11 @@ osx and linux home setup using ansible. setups up the folowing:
 * homebrew
 * vim
 
+prerequisite
+============
+1. install xcode commandline tools.
+2. install ansible.
+
 osx
 ===
 ```
