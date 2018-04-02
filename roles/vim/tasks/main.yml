@@ -11,6 +11,7 @@
   git:
     repo: "https://github.com/{{ item.repo }}"
     dest: "{{ me.home }}/{{ item.dest }}"
+    update: no
   loop:
     - { repo: 'quanghiem/vimrc.git',                dest: '.vim_runtime'}
     - { repo: 'rodjek/vim-puppet.git',              dest: '.vim/bundle/puppet'}
