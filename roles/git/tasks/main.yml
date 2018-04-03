@@ -23,5 +23,6 @@
     - { repo: 'deploy',       dest: 'deploy' }
     - { repo: 'kong',         dest: 'kong' }
     - { repo: 'puppet',       dest: 'puppet' }
+    - { repo: 'scripts',      dest: 'scripts' }
     - { repo: 'terraform',    dest: 'terraform' }
     - { repo: 'terrasandbox', dest: 'sandbox' }
